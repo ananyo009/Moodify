@@ -25,6 +25,8 @@ app.use('/api/users/', authRouter)
 
 app.use('/api/songs/', songRouter);
 
+app.use(express.static('./public'))
+
 
 
 
