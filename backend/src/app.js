@@ -19,7 +19,7 @@ app.use(cookieParser())
 
 app.use(
   cors({
-    origin: "https://moodify-u98o.onrender.com",
+    origin: "https://moodify-frontend-6f8c.onrender.com",
     credentials: true,
   }),
 );
