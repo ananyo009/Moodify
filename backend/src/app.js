@@ -29,7 +29,6 @@ app.use(express.static("./public"))
 
 
 const path = require('path')
-const __dirname = path.resolve();
 
 app.use("*name", (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
