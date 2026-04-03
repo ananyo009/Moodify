@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://moodify-ej0p.onrender.com/api/users",
+  baseURL: "/api/users",
   withCredentials: true,
 });
 
