@@ -41,7 +41,11 @@ async function register(req,res) {
         expiresIn:"3d"
         })
     
-    res.cookie('token', token);
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true, // Required for HTTPS (Render uses HTTPS)
+      sameSite: "none", // Required for cross-domain cookies
+    });
 
     return res.status(201).json({
         message: "user registered successfully",
@@ -84,7 +88,11 @@ async function login(req,res) {
         expiresIn:"3d"
     })
 
-    res.cookie("token", token)
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true, // Required for HTTPS (Render uses HTTPS)
+      sameSite: "none", // Required for cross-domain cookies
+    });
     
     return res.status(200).json({
         message: "login successful",
