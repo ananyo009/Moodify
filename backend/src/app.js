@@ -25,10 +25,15 @@ app.use('/api/users/', authRouter)
 
 app.use('/api/songs/', songRouter);
 
-// app.use(express.static('./public'))
+app.use(express.static("./public"))
 
 
-// const path = require("path");
+const path = require('path')
+const __dirname = path.resolve();
+
+app.use("*name", (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+})
 
 
 module.exports = app
