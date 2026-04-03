@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/api/users/",
+  baseURL: "https://moodify-ej0p.onrender.com/api/users/",
   withCredentials: true,
 });
 
