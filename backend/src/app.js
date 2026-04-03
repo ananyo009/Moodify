@@ -18,7 +18,7 @@ app.use(cookieParser())
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://moodify-ej0p.onrender.com"],
+    origin: ["http://localhost:5173",],
     credentials: true,
   }),
 );
@@ -30,11 +30,11 @@ app.use('/api/songs/', songRouter);
 app.use(express.static("./public"))
 
 
-const path = require('path')
+// const path = require('path')
 
-app.use("*name", (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'))
-})
+// app.use("*name", (req, res) => {
+//     res.sendFile(path.join(__dirname, '../public/index.html'))
+// })
 
 
 module.exports = app
