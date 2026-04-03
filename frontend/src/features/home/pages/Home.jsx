@@ -29,8 +29,10 @@ const Home = () => {
       </h1>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Faceexpression onClick={handleMoodDetection} />
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <div style={{ width: '100%', maxWidth: '420px' }}>
+            <Faceexpression onClick={handleMoodDetection} />
+          </div>
         </div>
 
         {loading && (

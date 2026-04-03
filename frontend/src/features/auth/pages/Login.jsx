@@ -50,7 +50,7 @@ const Login = () => {
                 type={showpassword ? "text" : "password"}
                 id="password"
                 placeholder="Enter the password"
-                value={password}
+                value={password} 
                 onChange={(e) => setpassword(e.target.value)}
               />
               <button

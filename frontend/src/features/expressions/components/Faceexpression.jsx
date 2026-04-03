@@ -32,7 +32,7 @@ export default function FaceExpression({ onClick = () => {} }) {
     <div style={{ textAlign: "center" }}>
       <video
         ref={videoRef}
-        style={{ width: "400px", borderRadius: "12px" }}
+        style={{ width: "100%", maxWidth: "400px", borderRadius: "12px", height: "auto" }}
         playsInline
       />
       <h2 style={{ marginBottom: "1.5rem", color:"limegreen" }}>{expression}</h2>
