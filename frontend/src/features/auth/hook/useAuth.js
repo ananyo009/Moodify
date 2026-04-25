@@ -22,10 +22,16 @@ export const useAuth = () => {
     }
     
     async function handlegetMe(){
-        setloading(true)
-    const data = await getMe();
-    setuser(data.user);
-    setloading(false);
+        try {
+            setloading(true)
+            const data = await getMe();
+            setuser(data.user);
+        } catch (error) {
+            console.error('Failed to get user:', error);
+            setuser(null);
+        } finally {
+            setloading(false);
+        }
     }
 
     async function handlelogout() {
